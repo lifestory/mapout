@@ -13,7 +13,6 @@ config['develop_config'].init_app(app)
 #app.config['JSON_AS_ASCII'] = False
 
 
-
 app.register_blueprint(official_bp)
 
 swagger = Swagger(app)
