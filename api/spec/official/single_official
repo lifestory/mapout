@@ -1,0 +1,19 @@
+return one official with info according to the unique id
+---
+tags:
+  - official
+  summary: "return one official with details according to the given id"
+  description: ""
+  parameters:
+  - name: "official_id"
+    in: "path"
+    description: "the official's id"
+    required: true
+    type: "string"
+  responses:
+    200:
+      description: "return an official"
+      schema:
+        $ref: "#/definitions/Official"
+    404:
+      description: "The official doesn't exist"

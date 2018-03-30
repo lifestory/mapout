@@ -1,0 +1,94 @@
+some definition
+---
+definitions:
+  Official:
+    required:
+    - "cur_pos"
+    - "id"
+    - "name"
+    properties:
+      id:
+        type: "integer"
+        format: "int32"
+      name:
+        type: "string"
+      cur_pos:
+        type: "string"
+      resume:
+        type: "string"
+    example:
+      resume: "resume"
+      cur_pos: "cur_pos"
+      name: "name"
+      id: 0
+  Officials:
+    type: "array"
+    items:
+      $ref: "#/definitions/Official"
+  Organization:
+    required:
+    - "id"
+    - "name"
+    properties:
+      id:
+        type: "integer"
+        format: "int32"
+      name:
+        type: "string"
+  Organizations:
+    type: "array"
+    items:
+      $ref: "#/definitions/Organization"
+  Alumnus:
+    required:
+    - "duration"
+    - "school_name"
+    properties:
+      school_name:
+        type: "string"
+      duration:
+        type: "string"
+      officials:
+        type: "array"
+        items:
+          $ref: "#/definitions/Officials"
+  allAlumnus:
+    type: "array"
+    items:
+      $ref: "#/definitions/Alumnus"
+  Colleague:
+    required:
+    - "duration"
+    - "position_title"
+    properties:
+      position_title:
+        type: "string"
+      duration:
+        type: "string"
+  allColleagues:
+    type: "array"
+    items:
+      $ref: "#/definitions/Colleague"
+  Countryman:
+    required:
+    - "cur_pos"
+    - "official_name"
+    properties:
+      official_name:
+        type: "string"
+      cur_pos:
+        type: "string"
+  Countrymen:
+    type: "array"
+    items:
+      $ref: "#/definitions/Countryman"
+  Region:
+    required:
+    - "name"
+    properties:
+      name:
+        type: "string"
+  Regions:
+    type: "array"
+    items:
+      $ref: "#/definitions/Region"

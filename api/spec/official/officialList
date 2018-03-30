@@ -1,0 +1,17 @@
+tags:
+  - "official"
+  summary: "return a list of officials according to the query content"
+  description: ""
+  parameter:
+  - name: "query"
+    in: "query"
+    description: "query content"
+    required: true
+    type: "string"
+  responses:
+    200:
+      description: "OK"
+      schema:
+        $ref: "#/definitions/Officials"
+    404:
+      description: "the officals don't exist"

@@ -1,0 +1,21 @@
+tag:
+  - "official"
+  summary: "return a list of officials according to the relation of the target official"
+  description: ""
+  parameters:
+  - name: "id"
+    in: "query"
+    description: "the official's id"
+    required: true
+    type: "string"
+  - name: "type"
+    in: "query"
+    description: "the relation type"
+    required: true
+    type: "string"
+  responses:
+    200:
+      description: "OK"
+      schema: "#/relations/Officials"
+    404:
+      description: "the relation doesn't exist"
